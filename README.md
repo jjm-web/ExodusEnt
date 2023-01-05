@@ -15,7 +15,7 @@
 
 <p align="center" />
     <img src="https://user-images.githubusercontent.com/76840242/210713216-7152f2e8-9b42-4e69-974f-5a244a1f6b91.gif"/>
-     <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
+    
 </p> 
 
  ## 2. 검색창
@@ -24,9 +24,9 @@
 <p align="center" />
     <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
 </p> 
---------------------------------
 
- ## 2. 검색창
+
+ ## 3. 메인화면
 
 
 <p align="center" />
