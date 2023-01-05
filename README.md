@@ -1,26 +1,36 @@
 # ExodusEnt
------------------------
+
 * 안녕하세요! __아이돌랭킹 포트폴리오__ 입니다.   
-* __로그인, 계정삭제, 검색창, 개인정보, 랭킹화면__ 등을 만들었습니다.   
-
------------------------
-
-<p align="center",style="color: green" />
-    <img src="https://user-images.githubusercontent.com/76840242/210713216-7152f2e8-9b42-4e69-974f-5a244a1f6b91.gif"/>
-</p> 
-
---------------------------------
-  
+* __로그인, 계정삭제, 검색창, 개인정보, 랭킹화면__ 등을 만들었습니다. 
 * __개발환경__
    
   * 언어 : __SWIFT__
   * 개발프레임 : __XCODE 14.2__
   * 데이터베이스 : __FIREBASE__
   * 그 외 : cocoapod, webimage, figma, github 등
-    
-----------------------------------------
-<p align="center",style="color: green" />
+--------------------------------
+
+ ## 1. 로그인
+
+
+<p align="center" />
     <img src="https://user-images.githubusercontent.com/76840242/210713216-7152f2e8-9b42-4e69-974f-5a244a1f6b91.gif"/>
+     <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
+</p> 
+
+ ## 2. 검색창
+
+
+<p align="center" />
+    <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
+</p> 
+--------------------------------
+
+ ## 2. 검색창
+
+
+<p align="center" />
+    <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
 </p> 
 ----------------------------------------
 
@@ -28,23 +38,5 @@
 
 -----------------------------------------
 
-1. 로그인
   
-![login](https://user-images.githubusercontent.com/76840242/173723399-84c05bb1-d231-44e4-9c9f-9b946e425790.JPG)
-   
-    1. 자동로그인(카카오, 애플, 구글)
-    2. 로그인후 
-      2-1. 회원정보와 일치 : 회원가입이 완료되며 위 오른쪽 상단에 [로그인][회원가입] -> [로그아웃]으로 변경
-      2-2 회원정보 불일치 : "로그인을 실패하였습니다." 라는 메세지를 출력후 다시입력
-![login_error](https://user-images.githubusercontent.com/76840242/173731850-c6b4c2c3-11ec-4283-8efd-b52366046709.JPG)
-
-    3. 아이디 기억하기를 만듦
-      * frmchek 함수를 통해서 아이디/비밀번호 유효성 검사를 하고 이상없으면 서브밋을 통해서 login_action 메서드  
-      통해서 보내주고 id와 name에 컬럼 값을 넣어준다.        
-      * 체크박스 값을 설정하기 위해 쿠키값이 비어 있지 않으면 체크값을 설정한 다음,   
-        체크박스에 ${chceck} 을 선언 후 값이 있을 경우만 체크될 수 있도록 합니다.
-        아이디 입력 input 소스에 value값을 쿠키값으로 설정합니다.    
-        변수 타입은 boolean으로 설정
-    4. 홈페이지 이동
-      4-1. 홈페이지를 누르면 메인페이지로 이동    
 
