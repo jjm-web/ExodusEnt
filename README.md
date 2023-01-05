@@ -30,7 +30,7 @@
 
 
 <p align="center" />
-    <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
+    <img src="https://user-images.githubusercontent.com/76840242/210716830-7780653a-7424-41a4-b6d4-fda10b0578cb.gif"/>
 </p> 
 
 
@@ -38,7 +38,7 @@
 ## 4. 랭킹
 
 <p align="center" />
-    <img src="https://user-images.githubusercontent.com/76840242/210716830-7780653a-7424-41a4-b6d4-fda10b0578cb.gif"/>
+    <img src="https://user-images.githubusercontent.com/76840242/210717179-55d932b2-d754-44bd-a7c5-4f57e01cfe73.gif"/>
 </p> 
 
 ## 5. 계정삭제
