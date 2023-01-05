@@ -18,7 +18,7 @@
     
 </p> 
 
- ## 2. 검색창
+## 2. 검색창
 
 
 <p align="center" />
@@ -26,12 +26,27 @@
 </p> 
 
 
- ## 3. 메인화면
+## 3. 메인화면
 
 
 <p align="center" />
     <img src="https://user-images.githubusercontent.com/76840242/210714254-9d945606-bb88-499a-9453-1776c8b46be0.gif"/>
 </p> 
+
+
+
+## 4. 랭킹
+
+<p align="center" />
+    <img src="https://user-images.githubusercontent.com/76840242/210716830-7780653a-7424-41a4-b6d4-fda10b0578cb.gif"/>
+</p> 
+
+## 5. 계정삭제
+
+<p align="center" />
+    <img src="https://user-images.githubusercontent.com/76840242/210716830-7780653a-7424-41a4-b6d4-fda10b0578cb.gif"/>
+</p> 
+
 ----------------------------------------
 
 * __기능 요약__
