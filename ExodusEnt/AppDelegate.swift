@@ -66,10 +66,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     return true
                 }
             
-        
-        if GIDSignIn.sharedInstance().handle(url) {
-            return true
-        }
+                if GIDSignIn.sharedInstance.handle(url) {
+                    // Handle other custom URL types.
+                    return true
+                }
         
         return false
     }

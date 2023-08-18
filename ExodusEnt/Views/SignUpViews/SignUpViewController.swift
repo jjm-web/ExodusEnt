@@ -16,7 +16,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import CryptoKit
 
-class SignUpViewController: UIViewController, GIDSignInDelegate {
+class SignUpViewController: UIViewController {
    
     var emailData : String!
     var passwordData : String!
@@ -32,26 +32,56 @@ class SignUpViewController: UIViewController, GIDSignInDelegate {
         startSignInWithAppleFlow()
     }
     
-    @IBAction func googleLoginBtn(_ sender: UIButton) {
-        GIDSignIn.sharedInstance().signIn()
+    @IBAction func googleLoginBtn(_ sender: GIDSignInButton) {
+        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
+
+        // Create Google Sign In configuration object.
+        let config = GIDConfiguration(clientID: clientID)
+        GIDSignIn.sharedInstance.configuration = config
+
+        // Start the sign in flow!
+        GIDSignIn.sharedInstance.signIn(withPresenting: self) { [unowned self] result, error in
+          guard error == nil else {
+            // ...
+              return
+          }
+
+          guard let user = result?.user,
+            let idToken = user.idToken?.tokenString
+          else {
+            // ...
+              return
+          }
+
+          let credential = GoogleAuthProvider.credential(withIDToken: idToken,
+                                                         accessToken: user.accessToken.tokenString)
+
+          // ...
+        Auth.auth().signIn(with: credential) { result, error in
+        GIDSignIn.sharedInstance.signOut()
+        self.naviagtion()
+              // At this point, our user is signed in
+            }
+        }
+        
     }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
-        GIDSignIn.sharedInstance().delegate = self
         KakaoLogin.addTarget(self, action: #selector(kakaoLoginButtonTapped), for: .touchUpInside)
+        
+      
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         firebaseAuth()
-        GIDSignIn.sharedInstance().presentingViewController = self
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        GIDSignIn.sharedInstance.signOut()
     }
     
     @objc private func kakaoLoginButtonTapped(_ sender: UIButton) {
@@ -173,14 +203,7 @@ class SignUpViewController: UIViewController, GIDSignInDelegate {
         return
       }
 
-      // 사용자 인증값 가져오기
-      guard let authentication = user.authentication else { return }
-      let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken, accessToken: authentication.accessToken)
-
-      // Firebase Auth에 인증정보 등록하기
-      Auth.auth().signIn(with: credential) { _, _ in
-        self.naviagtion()    // 메인 화면으로 이동
-      }
+     
     }
     
 }

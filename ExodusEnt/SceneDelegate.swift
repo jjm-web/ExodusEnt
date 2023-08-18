@@ -7,6 +7,7 @@
 
 import UIKit
 import KakaoSDKAuth
+import GoogleSignIn
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -57,6 +58,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                       _ = AuthController.handleOpenUrl(url: url)
                   }
               }
+        
     }
     
     func changeRootVC(_ vc:UIViewController, animated: Bool) {
