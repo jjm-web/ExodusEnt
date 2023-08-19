@@ -65,7 +65,17 @@ class NickNameViewController: UIViewController, UITextFieldDelegate {
                        }
                        
                    }
-               }
+            } else {
+                self.lblNickName.text = "첫번째 이용자입니다!"
+                self.lblNickName.textColor = .black
+                self.nextLoveIdol.isEnabled = true
+                self.nextLoveIdol.layer.backgroundColor = UIColor(red: 0.92, green: 0.334, blue: 0.304, alpha: 1).cgColor
+                self.nextLoveIdol.tintColor = .init(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                self.nextLoveIdol.layer.cornerRadius = 28
+                self.nextLoveIdol.layer.borderColor = UIColor(red: 0.846, green: 0.846, blue: 0.846, alpha: 1).cgColor
+                self.nextLoveIdol.layer.borderWidth = 1
+                self.nextLoveIdol.layer.masksToBounds = true
+            }
         })
         { error in
           print(error.localizedDescription)

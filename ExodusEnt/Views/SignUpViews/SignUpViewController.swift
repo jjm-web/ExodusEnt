@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
     var passwordData : String!
     var currentNonce: String?
     var ref: DatabaseReference!
-    
+   
     @IBOutlet var KakaoLogin: UIButton!
     @IBOutlet var appleLogin: ASAuthorizationAppleIDButton!
     @IBOutlet var googleLogin: GIDSignInButton!
@@ -75,7 +75,16 @@ class SignUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        firebaseAuth()
+//        do {
+//        try Auth.auth().signOut()
+//            }
+//
+//        catch {
+//
+//        print("An error occurred while signing out: \(error)")
+//        }
+        
+//        firebaseAuth()
         
     }
     
@@ -103,13 +112,12 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    private func firebaseAuth() {
+    func firebaseAuth() {
         
         if Auth.auth().currentUser != nil {
             self.rootView()
         } else {
-          // No user is signed in.
-          // ...
+          
         }
     }
     
@@ -157,8 +165,10 @@ class SignUpViewController: UIViewController {
                         Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!,
                                            password: "\(String(describing: user?.id))")
                         //alet 사용
+                        let alert = UIAlertController(title: "중복된 이메일 입니다.", message: "해당 계정은 사용중입니다. 다시 입력해 주세요", preferredStyle: UIAlertController.Style.alert)
+                        let okAction = UIAlertAction(title: "확인", style: .default)
+                        alert.addAction(okAction)
                         
-                        //self.didSendEventClosure?(.close)
                     } else {
                         print("DEBUG: 파이어베이스 사용자 생성")
                         Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!,
@@ -166,6 +176,7 @@ class SignUpViewController: UIViewController {
                         
                         self.emailData = "\(String(describing: user?.kakaoAccount?.email))"
                         self.passwordData = "\(String(describing: user?.id))"
+                        
                         self.naviagtion()   // 회원가입 화면으로 이동
                     }
                 }

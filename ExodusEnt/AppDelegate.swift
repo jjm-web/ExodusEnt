@@ -70,9 +70,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // Handle other custom URL types.
                     return true
                 }
-        
         return false
     }
+    
 }
     
   
