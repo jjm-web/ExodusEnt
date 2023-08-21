@@ -10,25 +10,27 @@ import IQKeyboardManagerSwift
 import Firebase
 import FirebaseAuth
 import FirebaseDatabase
-
+import RealmSwift
 class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
 
-    var data: String!
-    var bestIdol: String!
+    var data: String?
+    var bestIdol: String?
    
-    var birtData: String!
-    var sexData: String!
-    var countryData: String!
+    var birtData: String?
+    var sexData: String?
+    var countryData: String?
     
-    var timeData:String!
-    var timeData_2:String!
-    var timeData_3:String!
-    var timeData_4:String!
+    var timeData: String?
+    var timeData_2: String?
+    var timeData_3: String?
+    var timeData_4: String?
     
     var randomCode : String!
     
     var ref: DatabaseReference!
+    let realm = try! Realm()
     
+
     @IBOutlet weak var lblAlert: UILabel!
     
     @IBOutlet var codeTxf: UITextField!
@@ -45,6 +47,7 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
         layout()
         codeTxf.delegate = self
         ref = Database.database().reference()
+        
         mainBtn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
         skipBtn.addTarget(self, action: #selector(btnAction), for: .touchUpInside)
     }
@@ -112,7 +115,7 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
     func creatUser(alert: UIAlertAction!) {
         
         let userNickname = data
-        let userBestIdol = bestIdol
+        var userBestIdol = bestIdol
         let userBirtData = birtData
         let userSexData = sexData
         let userCountryData = countryData
@@ -120,14 +123,41 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
         let userTimeData_2 = timeData_2
         let userTimeData_3 = timeData_3
         let userTimeData_4 = timeData_4
-     
         let user = Auth.auth().currentUser
         let email = user?.email
-        let uid = user?.uid
+        //강제 형 변환으로 var값 설정
+        var uid = user?.uid
         let str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         let size = 7
         randomCode = str.createRandomStr(length: size)
         print(randomCode!)
+        
+        let realmWrith = Profile()
+        
+        realmWrith.name = userNickname
+        realmWrith.bestIdol = userBestIdol
+        realmWrith.birth = userBirtData
+        realmWrith.gender = userSexData
+        realmWrith.country = userCountryData
+        realmWrith.time = userTimeData
+        realmWrith.time_2 = userTimeData_2
+        realmWrith.time_3 = userTimeData_3
+        realmWrith.time_4 = userTimeData_4
+        
+//        @Persisted(primaryKey: true) var id: ObjectId
+//        @Persisted var name: String?
+//        @Persisted var Birth: String?
+//        @Persisted var gender: String?
+//        @Persisted var country: String?
+//        @Persisted var time: String?
+//        @Persisted var time_2: String?
+//        @Persisted var time_3: String?
+//        @Persisted var time_4: String?
+//        @Persisted var email: String?
+//        @Persisted var code: String?
+        
+        
+        
         // 추가 정보 입력
         ref.child("ExodusEnt").child("UserAccount").child(uid!).setValue(["idToken": uid!,
                                                                               "name": userNickname,
@@ -142,6 +172,15 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
                                                                               "email": email,
                                                                               "code" : randomCode,
                                                                      ])
+        do {
+            try realm.write {
+                realm.add
+            }
+        } catch {
+            realm.add(realmWrith)
+            
+        }
+        
 
         self.firebaseAuth()
     }
@@ -188,3 +227,5 @@ extension String {
     }
     
 }
+
+

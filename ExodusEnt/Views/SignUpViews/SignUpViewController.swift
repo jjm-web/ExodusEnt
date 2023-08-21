@@ -55,7 +55,6 @@ class SignUpViewController: UIViewController {
 
           let credential = GoogleAuthProvider.credential(withIDToken: idToken,
                                                          accessToken: user.accessToken.tokenString)
-
           // ...
         Auth.auth().signIn(with: credential) { result, error in
         GIDSignIn.sharedInstance.signOut()
@@ -75,16 +74,7 @@ class SignUpViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        do {
-//        try Auth.auth().signOut()
-//            }
-//
-//        catch {
-//
-//        print("An error occurred while signing out: \(error)")
-//        }
-        
-//        firebaseAuth()
+
         
     }
     
@@ -112,14 +102,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func firebaseAuth() {
-        
-        if Auth.auth().currentUser != nil {
-            self.rootView()
-        } else {
-          
-        }
-    }
+    
     
     private func rootView() {
         let tabbar = UIStoryboard.init(name: "Main", bundle: nil)

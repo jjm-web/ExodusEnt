@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040F603C2A939659009E32E1 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603B2A939659009E32E1 /* LoginNavigationController.swift */; };
+		040F603E2A939B4A009E32E1 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603D2A939B4A009E32E1 /* RealmData.swift */; };
 		04325FFB2A6F75A800AFCF55 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04325FF22A6F75A400AFCF55 /* Pretendard-Medium.otf */; };
 		04325FFC2A6F75A800AFCF55 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04325FF32A6F75A500AFCF55 /* Pretendard-Bold.otf */; };
 		04325FFD2A6F75A800AFCF55 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04325FF42A6F75A500AFCF55 /* Pretendard-Black.otf */; };
@@ -147,6 +149,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		040F603B2A939659009E32E1 /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginNavigationController.swift; path = /Users/mac/Downloads/aca/ExodusEnt/ExodusEnt/Views/SignUpViews/LoginNavigationController.swift; sourceTree = "<absolute>"; };
+		040F603D2A939B4A009E32E1 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
 		04325FF22A6F75A400AFCF55 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		04325FF32A6F75A500AFCF55 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		04325FF42A6F75A500AFCF55 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 		E35718D3293F01D7009B2910 /* SignUpViews */ = {
 			isa = PBXGroup;
 			children = (
+				040F603B2A939659009E32E1 /* LoginNavigationController.swift */,
 				04D2B3562A6828EF00C9B157 /* BasePaddingLabel.swift */,
 				E3A800D02941CB8B008F023F /* ReferralCodeViewController.swift */,
 				043A65FD29C44A8C00311A47 /* ProfileViewController.swift */,
@@ -427,6 +432,7 @@
 				E36D9BFB28C7169E008F7515 /* Images */,
 				E36D9BFA28C7168F008F7515 /* Views */,
 				E36D9BC828C712FB008F7515 /* AppDelegate.swift */,
+				040F603D2A939B4A009E32E1 /* RealmData.swift */,
 				E36D9BCA28C712FB008F7515 /* SceneDelegate.swift */,
 				E36D9BD328C712FD008F7515 /* LaunchScreen.storyboard */,
 				E36D9BCE28C712FB008F7515 /* Main.storyboard */,
@@ -869,6 +875,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3ABA518290274D300C1A2F4 /* SoloboyViewController.swift in Sources */,
+				040F603C2A939659009E32E1 /* LoginNavigationController.swift in Sources */,
 				E335177C28FE9A6A001B7D2B /* RangKingViewController.swift in Sources */,
 				E3943540294C2C9A0070E597 /* TwiterViewController.swift in Sources */,
 				E38D03C628FFCEDC00C30649 /* MainViewController.swift in Sources */,
@@ -904,6 +911,7 @@
 				E387A4C328E6C15700DB3471 /* ListViewController.swift in Sources */,
 				E35718D6293F029C009B2910 /* TableCell.swift in Sources */,
 				043A65FE29C44A8C00311A47 /* ProfileViewController.swift in Sources */,
+				040F603E2A939B4A009E32E1 /* RealmData.swift in Sources */,
 				E36869CB2952D3B700269401 /* GireSoloTableCell.swift in Sources */,
 				E3ABA51C2902757400C1A2F4 /* GroupBoyViewController.swift in Sources */,
 			);

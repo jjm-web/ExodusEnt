@@ -6,40 +6,30 @@
 //
 
 import UIKit
+import Firebase
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
-import FirebaseCore
 import FirebaseAuth
 import GoogleSignIn
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-   
+    var window: UIWindow?
 
-//    // 메인 화면으로 이동하기
-//    private func showMainViewController() {
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        let mainViewController = storyboard.instantiateViewController(withIdentifier: "AgreementViewController")
-//        mainViewController.modalPresentationStyle = .fullScreen
-//        UIApplication.shared.windows.first?.rootViewController?.show(mainViewController, sender: nil)
-//    }
-
-    
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         // Override point for customization after application launch.
-        Thread.sleep(forTimeInterval: 0.6)
-        
-        KakaoSDK.initSDK(appKey: "f3d6de1a34db1935a2aeb71f5593c4a0")
+        Thread.sleep(forTimeInterval: 0.2)
         FirebaseApp.configure()
+        KakaoSDK.initSDK(appKey: "f3d6de1a34db1935a2aeb71f5593c4a0")
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-        
+
+      
         // Override point for custsomization after application launch.
         return true
     }
@@ -73,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
+
 }
     
   

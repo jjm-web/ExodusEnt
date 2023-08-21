@@ -24,27 +24,7 @@ class AgreementViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
-//
-//    func applicationWillTerminate(_ application: UIApplication) {
-//        do {
-//            try Auth.auth().signOut()
-//            if let user = Auth.auth().currentUser {
-//                user.delete { [self] error in
-//                    if let error = error {
-//                        print("Firebase Error : ",error)
-//                    } else {
-//                        print("회원탈퇴 성공!")
-//                    }
-//                }
-//            } else {
-//                print("로그인 정보가 존재하지 않습니다")
-//
-//            }
-//        } catch {
-//            print("An error occurred while signing out: \(error)")
-//        }
-//
-//    }
+
 }
 
 
