@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
-
+import IQKeyboardManagerSwift
 class NickNameViewController: UIViewController, UITextFieldDelegate {
     
     var ref: DatabaseReference!
@@ -20,6 +20,8 @@ class NickNameViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var nextLoveIdol: UIButton!
     @IBOutlet var progerss: UIProgressView!
    
+    @IBOutlet weak var bottomButtonConstraint: NSLayoutConstraint!
+    
     @IBAction func nickName(_ sender: UITextField) {
         checkMaxLength(textField: nickNameText, maxLength: 14)
         
@@ -97,6 +99,12 @@ class NickNameViewController: UIViewController, UITextFieldDelegate {
         nickNameText.delegate = self
         nickNameLayout()
         nextBtn()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+                
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     
     }
     
@@ -104,6 +112,29 @@ class NickNameViewController: UIViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = false
     }
+    
+    @objc func keyboardWillHide(notification: Notification) {
+        bottomButtonConstraint.constant = 272
+        bottomButtonConstraint.priority = UILayoutPriority(750)
+        //bottomButtonConstraint.relation = .lessThanOrEqual
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func keyboardWillShow(notification: Notification) {
+            if let userInfo = notification.userInfo,
+               let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+                let keyboardHeight = keyboardFrame.height
+                let safeAreaBottom = view.safeAreaInsets.bottom
+                let buttonOffset = keyboardHeight - safeAreaBottom
+                bottomButtonConstraint.constant = buttonOffset
+                UIView.animate(withDuration: 0.3) {
+                    self.view.layoutIfNeeded()
+                }
+            }
+        }
+    
     
     func nickNameLayout() {
         nickNameText.addLeftPadding()

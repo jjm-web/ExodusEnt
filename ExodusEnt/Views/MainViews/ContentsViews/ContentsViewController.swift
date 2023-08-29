@@ -10,6 +10,9 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 
+
+
+
 class ContentsViewController: UIViewController {
 
     @IBOutlet var mainBannerCollection: UICollectionView!

@@ -10,13 +10,12 @@ import Firebase
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
-import FirebaseAuth
 import GoogleSignIn
 import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         

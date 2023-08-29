@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040F603C2A939659009E32E1 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603B2A939659009E32E1 /* LoginNavigationController.swift */; };
 		040F603E2A939B4A009E32E1 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603D2A939B4A009E32E1 /* RealmData.swift */; };
+		040F60402A984D4D009E32E1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603F2A984D4D009E32E1 /* PageViewController.swift */; };
 		04325FFB2A6F75A800AFCF55 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04325FF22A6F75A400AFCF55 /* Pretendard-Medium.otf */; };
 		04325FFC2A6F75A800AFCF55 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04325FF32A6F75A500AFCF55 /* Pretendard-Bold.otf */; };
 		04325FFD2A6F75A800AFCF55 /* Pretendard-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 04325FF42A6F75A500AFCF55 /* Pretendard-Black.otf */; };
@@ -151,6 +152,7 @@
 /* Begin PBXFileReference section */
 		040F603B2A939659009E32E1 /* LoginNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginNavigationController.swift; path = /Users/mac/Downloads/aca/ExodusEnt/ExodusEnt/Views/SignUpViews/LoginNavigationController.swift; sourceTree = "<absolute>"; };
 		040F603D2A939B4A009E32E1 /* RealmData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmData.swift; sourceTree = "<group>"; };
+		040F603F2A984D4D009E32E1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = /Users/mac/Downloads/aca/ExodusEnt/ExodusEnt/Views/MainViews/RangkingViews/PageViewController.swift; sourceTree = "<absolute>"; };
 		04325FF22A6F75A400AFCF55 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		04325FF32A6F75A500AFCF55 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		04325FF42A6F75A500AFCF55 /* Pretendard-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Black.otf"; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 		043260062A6F863F00AFCF55 /* RangkingViews */ = {
 			isa = PBXGroup;
 			children = (
+				040F603F2A984D4D009E32E1 /* PageViewController.swift */,
 				E335177B28FE9A6A001B7D2B /* RangKingViewController.swift */,
 			);
 			path = RangkingViews;
@@ -905,6 +908,7 @@
 				E394354B294C5BED0070E597 /* NewsSegmented.swift in Sources */,
 				E3319524294AF5DE0035D27E /* segment.swift in Sources */,
 				E3ABA51A2902753400C1A2F4 /* SoloGireViewController.swift in Sources */,
+				040F60402A984D4D009E32E1 /* PageViewController.swift in Sources */,
 				E349846328E29C7D0005A55A /* AgreementViewController.swift in Sources */,
 				E3A800D12941CB8B008F023F /* ReferralCodeViewController.swift in Sources */,
 				043260092A6F8A2D00AFCF55 /* MyInfoViewController1.swift in Sources */,

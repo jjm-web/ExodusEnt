@@ -51,9 +51,18 @@ class NaverViewController: UIViewController {
     
     
     func btnUrlImage() {
-        let transformer = SDImageResizingTransformer(size: CGSize(width: 382, height: 469), scaleMode: .fill)
+        let buttonSize = CGSize(width: 343, height: 469)
+        let transformer = SDImageResizingTransformer(size: buttonSize, scaleMode: .fill)
+
         
-        btnNav_1.sd_setImage(with:URL(string: btnUrlImage_1), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])
+        if let imageURL = URL(string: btnUrlImage_1) {
+            let image = UIImage(named: "your_placeholder_image_name") // Placeholder image
+            let resizedImage = image?.sd_resizedImage(with: buttonSize, scaleMode: .fill)
+            
+            btnNav_1.sd_setImage(with: imageURL, for: .normal, placeholderImage: resizedImage, context: [.imageTransformer: transformer])
+        }
+        
+//        btnNav_1.sd_setImage(with:URL(string: btnUrlImage_1), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])
         btnNav_2.sd_setImage(with:URL(string: btnUrlImage_2), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])
         btnNav_3.sd_setImage(with:URL(string: btnUrlImage_3), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])
         

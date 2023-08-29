@@ -36,8 +36,6 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
         
         bannerCollectionView.delegate = self
         bannerCollectionView.dataSource = self
@@ -45,26 +43,81 @@ class MainViewController: UIViewController {
         toolBar.layer.borderWidth = 1
         toolBar.layer.borderColor = CGColor(red: 0.929, green: 0.929, blue: 0.929, alpha: 1)
         
+        instaButton.btnOnLayer()
+        twiterButton.btnOffLayer()
+        naverButton.btnOffLayer()
+        kakaoButton.btnOffLayer()
+        
         instaView.isHidden = false
         twiterView.isHidden = true
         naverView.isHidden = true
         kakaoView.isHidden = true
+        
+        // SNS 버튼 스타일 및 뷰 체인지
+        instaButton.addTarget(self, action: #selector(buttonOnOff(button:)), for: .touchUpInside)
+        twiterButton.addTarget(self, action: #selector(buttonOnOff(button:)), for: .touchUpInside)
+        naverButton.addTarget(self, action: #selector(buttonOnOff(button:)), for: .touchUpInside)
+        kakaoButton.addTarget(self, action: #selector(buttonOnOff(button:)), for: .touchUpInside)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabbar()
         navigationController?.isNavigationBarHidden = true
-       
-        instaButton.btnOnLayer()
-        twiterButton.btnOffLayer()
-        naverButton.btnOffLayer()
-        kakaoButton.btnOffLayer()
-        
+               
         formatter_time.dateFormat = "HH:mm:ss"
         
         Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(MainViewController.timerAction), userInfo: nil, repeats: true)
         
+    }
+    
+    @objc func buttonOnOff(button: UIButton) {
+        switch button {
+            // 인스타 버튼 액션 함수 처리
+            case instaButton:
+                instaButton.btnOnLayer()
+                twiterButton.btnOffLayer()
+                naverButton.btnOffLayer()
+                kakaoButton.btnOffLayer()
+            
+                instaView.isHidden = false
+                twiterView.isHidden = true
+                naverView.isHidden = true
+                kakaoView.isHidden = true
+            // 트위터 버튼 액션 함수 처리
+            case twiterButton:
+                instaButton.btnOffLayer()
+                twiterButton.btnOnLayer()
+                naverButton.btnOffLayer()
+                kakaoButton.btnOffLayer()
+        
+                instaView.isHidden = true
+                twiterView.isHidden = false
+                naverView.isHidden = true
+                kakaoView.isHidden = true
+            // 네이버 버튼 액션 함수 처리
+            case naverButton:
+                instaButton.btnOffLayer()
+                twiterButton.btnOffLayer()
+                naverButton.btnOnLayer()
+                kakaoButton.btnOffLayer()
+        
+                instaView.isHidden = true
+                twiterView.isHidden = true
+                naverView.isHidden = false
+                kakaoView.isHidden = true
+            // 카카오 버튼 액션 함수 처리
+            default:
+                instaButton.btnOffLayer()
+                twiterButton.btnOffLayer()
+                naverButton.btnOffLayer()
+                kakaoButton.btnOnLayer()
+        
+                instaView.isHidden = true
+                twiterView.isHidden = true
+                naverView.isHidden = true
+                kakaoView.isHidden = false
+        }
     }
     
     @objc func timerAction() {
@@ -78,56 +131,6 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func btnInstaAction(_ sender: UIButton) {
-        instaView.isHidden = false
-        twiterView.isHidden = true
-        naverView.isHidden = true
-        kakaoView.isHidden = true
-        
-        instaButton.btnOnLayer()
-        twiterButton.btnOffLayer()
-        naverButton.btnOffLayer()
-        kakaoButton.btnOffLayer()
-    }
-    
-    @IBAction func btnTwiterAction(_ sender: UIButton) {
-        instaView.isHidden = true
-        twiterView.isHidden = false
-        naverView.isHidden = true
-        kakaoView.isHidden = true
-        
-        instaButton.btnOffLayer()
-        twiterButton.btnOnLayer()
-        naverButton.btnOffLayer()
-        kakaoButton.btnOffLayer()
-    }
-    @IBAction func btnNaverAction(_ sender: UIButton) {
-        instaView.isHidden = true
-        twiterView.isHidden = true
-        naverView.isHidden = false
-        kakaoView.isHidden = true
-        
-        instaButton.btnOffLayer()
-        twiterButton.btnOffLayer()
-        naverButton.btnOnLayer()
-        kakaoButton.btnOffLayer()
-        
-    }
-    @IBAction func btnKakaoAction(_ sender: UIButton) {
-        instaView.isHidden = true
-        twiterView.isHidden = true
-        naverView.isHidden = true
-        kakaoView.isHidden = false
-        
-        instaButton.btnOffLayer()
-        twiterButton.btnOffLayer()
-        naverButton.btnOffLayer()
-        kakaoButton.btnOnLayer()
-    }
-    
-  
-    
-
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -205,9 +208,9 @@ extension UIButton {
         self.backgroundColor = UIColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.0)
         self.setTitleColor(.white, for: .normal)
         self.layer.borderWidth = 1
-        self.layer.cornerRadius = 16
-        self.clipsToBounds = true
-        self.layer.cornerCurve = .continuous
+        self.layer.borderColor = CGColor(red: 0.12, green: 0.12, blue: 0.12, alpha: 1.0)
+        self.layer.cornerRadius = 14
+        self.layer.masksToBounds = true
     }
     
     func btnOffLayer() {
@@ -215,8 +218,7 @@ extension UIButton {
         self.setTitleColor(UIColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1.0), for: .normal)
         self.layer.borderWidth = 1
         self.layer.borderColor = CGColor(red: 0.65, green: 0.65, blue: 0.65, alpha: 1.0)
-        self.layer.cornerRadius = 16
-        self.clipsToBounds = true
-        self.layer.cornerCurve = .continuous
+        self.layer.cornerRadius = 14
+        self.layer.masksToBounds = true
     }
 }

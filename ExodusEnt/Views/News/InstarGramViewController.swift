@@ -49,7 +49,7 @@ class InstarGramViewController: UIViewController {
     }
     
     func btnUrlImage() {
-        let transformer = SDImageResizingTransformer(size: CGSize(width: 382, height: 469), scaleMode: .fill)
+        let transformer = SDImageResizingTransformer(size: CGSize(width: 343, height: 469), scaleMode: .fill)
         
         btn_1.sd_setImage(with:URL(string: btnUrlImage_1), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])
         btn_2.sd_setImage(with:URL(string: btnUrlImage_2), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])

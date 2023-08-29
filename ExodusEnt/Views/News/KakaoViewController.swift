@@ -52,7 +52,7 @@ class KakaoViewController: UIViewController {
     
     
     func btnUrlImage() {
-        let transformer = SDImageResizingTransformer(size: CGSize(width: 382, height: 469), scaleMode: .fill)
+        let transformer = SDImageResizingTransformer(size: CGSize(width: 343, height: 469), scaleMode: .fill)
         
         btnKakao.sd_setImage(with:URL(string: btnUrlImage_1), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])
         btnKakao2.sd_setImage(with:URL(string: btnUrlImage_2), for: .normal, placeholderImage: nil, context: [.imageTransformer: transformer])

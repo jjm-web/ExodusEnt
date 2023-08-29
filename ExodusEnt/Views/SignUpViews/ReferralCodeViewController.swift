@@ -115,7 +115,7 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
     func creatUser(alert: UIAlertAction!) {
         
         let userNickname = data
-        var userBestIdol = bestIdol
+        let userBestIdol = bestIdol
         let userBirtData = birtData
         let userSexData = sexData
         let userCountryData = countryData
@@ -132,30 +132,7 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
         randomCode = str.createRandomStr(length: size)
         print(randomCode!)
         
-        let realmWrith = Profile()
-        
-        realmWrith.name = userNickname
-        realmWrith.bestIdol = userBestIdol
-        realmWrith.birth = userBirtData
-        realmWrith.gender = userSexData
-        realmWrith.country = userCountryData
-        realmWrith.time = userTimeData
-        realmWrith.time_2 = userTimeData_2
-        realmWrith.time_3 = userTimeData_3
-        realmWrith.time_4 = userTimeData_4
-        
-//        @Persisted(primaryKey: true) var id: ObjectId
-//        @Persisted var name: String?
-//        @Persisted var Birth: String?
-//        @Persisted var gender: String?
-//        @Persisted var country: String?
-//        @Persisted var time: String?
-//        @Persisted var time_2: String?
-//        @Persisted var time_3: String?
-//        @Persisted var time_4: String?
-//        @Persisted var email: String?
-//        @Persisted var code: String?
-        
+       
         
         
         // 추가 정보 입력
@@ -171,18 +148,27 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
                                                                               "time_4": userTimeData_4,
                                                                               "email": email,
                                                                               "code" : randomCode,
-                                                                     ])
-        do {
-            try realm.write {
-                realm.add
-            }
-        } catch {
+                                                                        ])
+        let realmWrith = Profile()
+        
+        realmWrith.name = userNickname
+        realmWrith.bestIdol = userBestIdol
+        realmWrith.birth = userBirtData
+        realmWrith.gender = userSexData
+        realmWrith.country = userCountryData
+        realmWrith.time = userTimeData
+        realmWrith.time_2 = userTimeData_2
+        realmWrith.time_3 = userTimeData_3
+        realmWrith.time_4 = userTimeData_4
+
+        try! realm.write {
             realm.add(realmWrith)
-            
+            print(Realm.Configuration.defaultConfiguration.fileURL!)
         }
+     
         
 
-        self.firebaseAuth()
+       rootView()
     }
     
     func rootView() {
@@ -191,16 +177,7 @@ class ReferralCodeViewController: UIViewController, UITextFieldDelegate {
               (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootVC(mainView, animated: false)
     }
     
-    func firebaseAuth() {
-        
-        if Auth.auth().currentUser != nil {
-            self.rootView()
-        } else {
-          // No user is signed in.
-          // ...
-        }
-    }
-    
+   
     
     func checkMaxLength(textField: UITextField!, maxLength: Int) {
         if ((textField.text?.count)!  > maxLength) {
