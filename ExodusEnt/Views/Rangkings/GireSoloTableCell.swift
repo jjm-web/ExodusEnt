@@ -9,6 +9,17 @@ import UIKit
 
 class GireSoloTableCell: UITableViewCell {
 
+    @IBOutlet var medalImg: UIImageView!
+    @IBOutlet var idolImg: UIImageView!
+    
+    @IBOutlet var lblGireSolo: UILabel!
+    @IBOutlet var lblGroupName: UILabel!
+    @IBOutlet var lblLanking: UILabel!
+    @IBOutlet var lblPoint: UILabel!
+    
+    @IBOutlet var heartButton: UIButton!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -55,8 +55,7 @@ class RangKingViewController: UIViewController {
                 print(currentIndex)
             }
         }
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.startAnimating()
@@ -79,8 +78,6 @@ class RangKingViewController: UIViewController {
         // Load images using RxSwift
         segmented.addTarget(self, action: #selector(loadImages(segment:)), for: .valueChanged)
         
-        
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -94,6 +91,7 @@ class RangKingViewController: UIViewController {
             print("error")
         }
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.tabbar()
@@ -115,7 +113,7 @@ class RangKingViewController: UIViewController {
     }
     
     func fetchAndLoadImages() {
-        let imageGroupNames = ["giregroupidol", "boygroupidol", "boysoloidol", "giresoloidol"]
+        let imageGroupNames = ["giregroupidol", "boygroupidol", "giresoloidol", "boysoloidol"]
            
         var imageURLs: [String] = []
            

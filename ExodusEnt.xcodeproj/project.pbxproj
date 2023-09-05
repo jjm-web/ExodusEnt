@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040459432AA24DBE00E72E26 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 040459422AA24DBE00E72E26 /* AlamofireImage */; };
 		040F603C2A939659009E32E1 /* LoginNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603B2A939659009E32E1 /* LoginNavigationController.swift */; };
 		040F603E2A939B4A009E32E1 /* RealmData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603D2A939B4A009E32E1 /* RealmData.swift */; };
 		040F60402A984D4D009E32E1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040F603F2A984D4D009E32E1 /* PageViewController.swift */; };
@@ -31,10 +32,11 @@
 		046A553B2A8FDB4300D68CF9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 046A553A2A8FDB4300D68CF9 /* FirebaseFirestoreSwift */; };
 		046A553D2A8FDB4300D68CF9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 046A553C2A8FDB4300D68CF9 /* FirebaseStorage */; };
 		046A55452A8FDC1300D68CF9 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 046A55442A8FDC1300D68CF9 /* SDWebImage */; };
+		04C582AC2AA627A80080EAF5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C582AB2AA627A80080EAF5 /* ImageLoader.swift */; };
 		04D2B3572A6828F000C9B157 /* BasePaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D2B3562A6828EF00C9B157 /* BasePaddingLabel.swift */; };
-		27812361A6D0DA1C406BECE6 /* Pods_ExodusEnt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0977C85DB3513AB4F9A85B7 /* Pods_ExodusEnt.framework */; };
-		8FE8BA4318C3B3A97E0E3144 /* Pods_ExodusEnt_ExodusEntUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CDCB939DA69937CDD235136 /* Pods_ExodusEnt_ExodusEntUITests.framework */; };
-		AE976B2B607CC9AE2B51D0ED /* Pods_ExodusEntTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63ADE6B6E9530306DE149D37 /* Pods_ExodusEntTests.framework */; };
+		13E22B21A97878670795B820 /* Pods_ExodusEntTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65391F66C0EA2BE2C11D7E88 /* Pods_ExodusEntTests.framework */; };
+		515623ABC980A905958A9C3C /* Pods_ExodusEnt_ExodusEntUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C3D970CAB1135562738A81 /* Pods_ExodusEnt_ExodusEntUITests.framework */; };
+		7A13A98D21A45E0129042BA8 /* Pods_ExodusEnt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 066223645E188A82F767D889 /* Pods_ExodusEnt.framework */; };
 		E306721F2902849300E441BD /* checking.svg in Resources */ = {isa = PBXBuildFile; fileRef = E306721E2902849300E441BD /* checking.svg */; };
 		E326166628E53AA600615808 /* checBox.svg in Resources */ = {isa = PBXBuildFile; fileRef = E326166528E53AA500615808 /* checBox.svg */; };
 		E3319524294AF5DE0035D27E /* segment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3319523294AF5DE0035D27E /* segment.swift */; };
@@ -165,15 +167,17 @@
 		043260082A6F8A2D00AFCF55 /* MyInfoViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyInfoViewController1.swift; path = Views/MainViews/MyInfoViews/MyInfoViewController1.swift; sourceTree = "<group>"; };
 		0432600A2A6F8A3500AFCF55 /* MyInfoViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController2.swift; sourceTree = "<group>"; };
 		043A65FD29C44A8C00311A47 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		04C582AB2AA627A80080EAF5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		04D2B3562A6828EF00C9B157 /* BasePaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePaddingLabel.swift; sourceTree = "<group>"; };
-		0F20E788E805735476AF0E27 /* Pods-ExodusEnt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt.debug.xcconfig"; path = "Target Support Files/Pods-ExodusEnt/Pods-ExodusEnt.debug.xcconfig"; sourceTree = "<group>"; };
-		247067FB178F8614615471D2 /* Pods-ExodusEnt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt.release.xcconfig"; path = "Target Support Files/Pods-ExodusEnt/Pods-ExodusEnt.release.xcconfig"; sourceTree = "<group>"; };
-		4FF0CBC8BD17BE029040B03B /* Pods-ExodusEntTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEntTests.debug.xcconfig"; path = "Target Support Files/Pods-ExodusEntTests/Pods-ExodusEntTests.debug.xcconfig"; sourceTree = "<group>"; };
-		63ADE6B6E9530306DE149D37 /* Pods_ExodusEntTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExodusEntTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A34DC9AFB6AB8A784365CD6 /* Pods-ExodusEnt-ExodusEntUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt-ExodusEntUITests.release.xcconfig"; path = "Target Support Files/Pods-ExodusEnt-ExodusEntUITests/Pods-ExodusEnt-ExodusEntUITests.release.xcconfig"; sourceTree = "<group>"; };
-		6CDCB939DA69937CDD235136 /* Pods_ExodusEnt_ExodusEntUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExodusEnt_ExodusEntUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7FFDC52C002AE0B8EF752A1C /* Pods-ExodusEntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEntTests.release.xcconfig"; path = "Target Support Files/Pods-ExodusEntTests/Pods-ExodusEntTests.release.xcconfig"; sourceTree = "<group>"; };
-		B0977C85DB3513AB4F9A85B7 /* Pods_ExodusEnt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExodusEnt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		066223645E188A82F767D889 /* Pods_ExodusEnt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExodusEnt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		16CA1F5973667F88F55D3FBC /* Pods-ExodusEnt-ExodusEntUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt-ExodusEntUITests.release.xcconfig"; path = "Target Support Files/Pods-ExodusEnt-ExodusEntUITests/Pods-ExodusEnt-ExodusEntUITests.release.xcconfig"; sourceTree = "<group>"; };
+		178AEB95D8D7386C6ADB73DF /* Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExodusEnt-ExodusEntUITests/Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		30CBB026D9C848B6903C836E /* Pods-ExodusEntTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEntTests.debug.xcconfig"; path = "Target Support Files/Pods-ExodusEntTests/Pods-ExodusEntTests.debug.xcconfig"; sourceTree = "<group>"; };
+		44C3D970CAB1135562738A81 /* Pods_ExodusEnt_ExodusEntUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExodusEnt_ExodusEntUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A100E7710CD3538EFED31F3 /* Pods-ExodusEnt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt.release.xcconfig"; path = "Target Support Files/Pods-ExodusEnt/Pods-ExodusEnt.release.xcconfig"; sourceTree = "<group>"; };
+		65391F66C0EA2BE2C11D7E88 /* Pods_ExodusEntTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExodusEntTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84671B3706859AFB9D4EE740 /* Pods-ExodusEntTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEntTests.release.xcconfig"; path = "Target Support Files/Pods-ExodusEntTests/Pods-ExodusEntTests.release.xcconfig"; sourceTree = "<group>"; };
+		9FC1AFE631DD432EB7564BA5 /* Pods-ExodusEnt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt.debug.xcconfig"; path = "Target Support Files/Pods-ExodusEnt/Pods-ExodusEnt.debug.xcconfig"; sourceTree = "<group>"; };
 		E306721E2902849300E441BD /* checking.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = checking.svg; sourceTree = "<group>"; };
 		E30EC13428E19F2400AC19B2 /* ExodusEnt.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExodusEnt.entitlements; sourceTree = "<group>"; };
 		E326166528E53AA500615808 /* checBox.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = checBox.svg; sourceTree = "<group>"; };
@@ -261,7 +265,6 @@
 		E3E1905329528B1C00278040 /* arrow-right.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "arrow-right.svg"; sourceTree = "<group>"; };
 		E3E1905529528D8900278040 /* diamond.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = diamond.svg; sourceTree = "<group>"; };
 		E3E1905629528D8A00278040 /* heart_fill.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = heart_fill.svg; sourceTree = "<group>"; };
-		F49386A3208E61062BD8E046 /* Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExodusEnt-ExodusEntUITests/Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,10 +278,11 @@
 				046A552F2A8FDB4300D68CF9 /* FirebaseAnalytics in Frameworks */,
 				046A55312A8FDB4300D68CF9 /* FirebaseAppCheck in Frameworks */,
 				046A55452A8FDC1300D68CF9 /* SDWebImage in Frameworks */,
+				040459432AA24DBE00E72E26 /* AlamofireImage in Frameworks */,
 				046A55332A8FDB4300D68CF9 /* FirebaseAuth in Frameworks */,
 				046A55392A8FDB4300D68CF9 /* FirebaseFirestore in Frameworks */,
 				046A553B2A8FDB4300D68CF9 /* FirebaseFirestoreSwift in Frameworks */,
-				27812361A6D0DA1C406BECE6 /* Pods_ExodusEnt.framework in Frameworks */,
+				7A13A98D21A45E0129042BA8 /* Pods_ExodusEnt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE976B2B607CC9AE2B51D0ED /* Pods_ExodusEntTests.framework in Frameworks */,
+				13E22B21A97878670795B820 /* Pods_ExodusEntTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +298,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE8BA4318C3B3A97E0E3144 /* Pods_ExodusEnt_ExodusEntUITests.framework in Frameworks */,
+				515623ABC980A905958A9C3C /* Pods_ExodusEnt_ExodusEntUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,12 +359,12 @@
 			path = MyInfoViews;
 			sourceTree = "<group>";
 		};
-		6A22E8312D1FF131CC523623 /* Frameworks */ = {
+		B999BD0F63F874321B10E762 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0977C85DB3513AB4F9A85B7 /* Pods_ExodusEnt.framework */,
-				6CDCB939DA69937CDD235136 /* Pods_ExodusEnt_ExodusEntUITests.framework */,
-				63ADE6B6E9530306DE149D37 /* Pods_ExodusEntTests.framework */,
+				066223645E188A82F767D889 /* Pods_ExodusEnt.framework */,
+				44C3D970CAB1135562738A81 /* Pods_ExodusEnt_ExodusEntUITests.framework */,
+				65391F66C0EA2BE2C11D7E88 /* Pods_ExodusEntTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -412,7 +416,7 @@
 				E36D9BE828C712FD008F7515 /* ExodusEntUITests */,
 				E36D9BC628C712FB008F7515 /* Products */,
 				F06C963FBEA9A289B7B5F88F /* Pods */,
-				6A22E8312D1FF131CC523623 /* Frameworks */,
+				B999BD0F63F874321B10E762 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -547,6 +551,7 @@
 			isa = PBXGroup;
 			children = (
 				E3ABA517290274D300C1A2F4 /* SoloboyViewController.swift */,
+				04C582AB2AA627A80080EAF5 /* ImageLoader.swift */,
 				E3ABA5192902753400C1A2F4 /* SoloGireViewController.swift */,
 				E3ABA51B2902757400C1A2F4 /* GroupBoyViewController.swift */,
 				E3ABA51D2902758B00C1A2F4 /* GroupGireViewController.swift */,
@@ -561,12 +566,12 @@
 		F06C963FBEA9A289B7B5F88F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0F20E788E805735476AF0E27 /* Pods-ExodusEnt.debug.xcconfig */,
-				247067FB178F8614615471D2 /* Pods-ExodusEnt.release.xcconfig */,
-				F49386A3208E61062BD8E046 /* Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig */,
-				6A34DC9AFB6AB8A784365CD6 /* Pods-ExodusEnt-ExodusEntUITests.release.xcconfig */,
-				4FF0CBC8BD17BE029040B03B /* Pods-ExodusEntTests.debug.xcconfig */,
-				7FFDC52C002AE0B8EF752A1C /* Pods-ExodusEntTests.release.xcconfig */,
+				9FC1AFE631DD432EB7564BA5 /* Pods-ExodusEnt.debug.xcconfig */,
+				4A100E7710CD3538EFED31F3 /* Pods-ExodusEnt.release.xcconfig */,
+				178AEB95D8D7386C6ADB73DF /* Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig */,
+				16CA1F5973667F88F55D3FBC /* Pods-ExodusEnt-ExodusEntUITests.release.xcconfig */,
+				30CBB026D9C848B6903C836E /* Pods-ExodusEntTests.debug.xcconfig */,
+				84671B3706859AFB9D4EE740 /* Pods-ExodusEntTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -578,12 +583,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E36D9BEF28C712FD008F7515 /* Build configuration list for PBXNativeTarget "ExodusEnt" */;
 			buildPhases = (
-				6B0C07E9FE3E38DDCB1CA92F /* [CP] Check Pods Manifest.lock */,
+				387D5F1F951CC1134CBACCAC /* [CP] Check Pods Manifest.lock */,
 				E36D9BC128C712FB008F7515 /* Sources */,
 				E36D9BC228C712FB008F7515 /* Frameworks */,
 				E36D9BC328C712FB008F7515 /* Resources */,
 				043A660129C44AE800311A47 /* Embed Frameworks */,
-				072874C1CB4BBD767781C6BE /* [CP] Embed Pods Frameworks */,
+				27F47A99434F93A4CF043F6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -600,6 +605,7 @@
 				046A553A2A8FDB4300D68CF9 /* FirebaseFirestoreSwift */,
 				046A553C2A8FDB4300D68CF9 /* FirebaseStorage */,
 				046A55442A8FDC1300D68CF9 /* SDWebImage */,
+				040459422AA24DBE00E72E26 /* AlamofireImage */,
 			);
 			productName = ExodusEnt;
 			productReference = E36D9BC528C712FB008F7515 /* ExodusEnt.app */;
@@ -609,7 +615,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E36D9BF228C712FD008F7515 /* Build configuration list for PBXNativeTarget "ExodusEntTests" */;
 			buildPhases = (
-				376C5912978F29B336B208B4 /* [CP] Check Pods Manifest.lock */,
+				8CA1A4861314124F30F8CB85 /* [CP] Check Pods Manifest.lock */,
 				E36D9BD728C712FD008F7515 /* Sources */,
 				E36D9BD828C712FD008F7515 /* Frameworks */,
 				E36D9BD928C712FD008F7515 /* Resources */,
@@ -628,11 +634,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E36D9BF528C712FD008F7515 /* Build configuration list for PBXNativeTarget "ExodusEntUITests" */;
 			buildPhases = (
-				7E9CF65A945E5FDAFDF351BF /* [CP] Check Pods Manifest.lock */,
+				AE1EB8823C7E2FEEDA0F3F5C /* [CP] Check Pods Manifest.lock */,
 				E36D9BE128C712FD008F7515 /* Sources */,
 				E36D9BE228C712FD008F7515 /* Frameworks */,
 				E36D9BE328C712FD008F7515 /* Resources */,
-				F6C687BAC9ABB0C2BDFC591A /* [CP] Embed Pods Frameworks */,
+				F393E4F600CE9D480448E49E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -679,6 +685,7 @@
 			packageReferences = (
 				046A552D2A8FDB4300D68CF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				046A55432A8FDC1300D68CF9 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				040459412AA24DBE00E72E26 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = E36D9BC628C712FB008F7515 /* Products */;
 			projectDirPath = "";
@@ -770,7 +777,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		072874C1CB4BBD767781C6BE /* [CP] Embed Pods Frameworks */ = {
+		27F47A99434F93A4CF043F6D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -787,29 +794,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExodusEnt/Pods-ExodusEnt-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		376C5912978F29B336B208B4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ExodusEntTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B0C07E9FE3E38DDCB1CA92F /* [CP] Check Pods Manifest.lock */ = {
+		387D5F1F951CC1134CBACCAC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -831,7 +816,29 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7E9CF65A945E5FDAFDF351BF /* [CP] Check Pods Manifest.lock */ = {
+		8CA1A4861314124F30F8CB85 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExodusEntTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE1EB8823C7E2FEEDA0F3F5C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -853,7 +860,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F6C687BAC9ABB0C2BDFC591A /* [CP] Embed Pods Frameworks */ = {
+		F393E4F600CE9D480448E49E /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -891,6 +898,7 @@
 				0432600B2A6F8A3500AFCF55 /* MyInfoViewController2.swift in Sources */,
 				E34C999A28E589BB00217BCD /* SearchBarViewController.swift in Sources */,
 				E3A800D52946B27B008F023F /* CountyViewController.swift in Sources */,
+				04C582AC2AA627A80080EAF5 /* ImageLoader.swift in Sources */,
 				E3943542294C2CB60070E597 /* NaverViewController.swift in Sources */,
 				E394353E294C2C890070E597 /* InstarGramViewController.swift in Sources */,
 				E36869C92952D3A200269401 /* BoySoloTableCell.swift in Sources */,
@@ -1089,7 +1097,7 @@
 		};
 		E36D9BF028C712FD008F7515 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F20E788E805735476AF0E27 /* Pods-ExodusEnt.debug.xcconfig */;
+			baseConfigurationReference = 9FC1AFE631DD432EB7564BA5 /* Pods-ExodusEnt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1097,7 +1105,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7YLDG597L;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KakaoOpenSDK-1.23.10",
@@ -1108,9 +1115,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1172,7 +1180,7 @@
 		};
 		E36D9BF128C712FD008F7515 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 247067FB178F8614615471D2 /* Pods-ExodusEnt.release.xcconfig */;
+			baseConfigurationReference = 4A100E7710CD3538EFED31F3 /* Pods-ExodusEnt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1180,7 +1188,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V7YLDG597L;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/KakaoOpenSDK-1.23.10",
@@ -1191,9 +1198,10 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1255,7 +1263,7 @@
 		};
 		E36D9BF328C712FD008F7515 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FF0CBC8BD17BE029040B03B /* Pods-ExodusEntTests.debug.xcconfig */;
+			baseConfigurationReference = 30CBB026D9C848B6903C836E /* Pods-ExodusEntTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1275,7 +1283,7 @@
 		};
 		E36D9BF428C712FD008F7515 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7FFDC52C002AE0B8EF752A1C /* Pods-ExodusEntTests.release.xcconfig */;
+			baseConfigurationReference = 84671B3706859AFB9D4EE740 /* Pods-ExodusEntTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1295,7 +1303,7 @@
 		};
 		E36D9BF628C712FD008F7515 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F49386A3208E61062BD8E046 /* Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig */;
+			baseConfigurationReference = 178AEB95D8D7386C6ADB73DF /* Pods-ExodusEnt-ExodusEntUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1313,7 +1321,7 @@
 		};
 		E36D9BF728C712FD008F7515 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6A34DC9AFB6AB8A784365CD6 /* Pods-ExodusEnt-ExodusEntUITests.release.xcconfig */;
+			baseConfigurationReference = 16CA1F5973667F88F55D3FBC /* Pods-ExodusEnt-ExodusEntUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1371,6 +1379,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		040459412AA24DBE00E72E26 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		046A552D2A8FDB4300D68CF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -1390,6 +1406,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		040459422AA24DBE00E72E26 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 040459412AA24DBE00E72E26 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		046A552E2A8FDB4300D68CF9 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 046A552D2A8FDB4300D68CF9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

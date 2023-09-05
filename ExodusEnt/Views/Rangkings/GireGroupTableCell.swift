@@ -8,7 +8,17 @@
 import UIKit
 
 class GireGroupTableCell: UITableViewCell {
-
+    
+    @IBOutlet var medalImg: UIImageView!
+    @IBOutlet var idolImg: UIImageView!
+    
+    @IBOutlet var lblGireGroup: UILabel!
+    @IBOutlet var lblAgency: UILabel!
+    @IBOutlet var lblLanking: UILabel!
+    @IBOutlet var lblPoint: UILabel!
+    
+    @IBOutlet var heartButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

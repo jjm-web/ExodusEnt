@@ -17,29 +17,23 @@ class LoginNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+      
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("ViewController의 view가 Load됨")
         print("## realm file dir -> \(Realm.Configuration.defaultConfiguration.fileURL!)")
         if (firebaseAuth != nil) && (realm.isEmpty == false) {
             showMainScreen()
         } else {
             showLoginScreen()
         }
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-          print("ViewController의 view가 Load됨")
     }
 
     
     func showMainScreen() {
-        
-        do {
-            try Auth.auth().signOut()
-            print("Logged out successfully.")
-        } catch let signOutError as NSError {
-            print("Error signing out: \(signOutError)")
-        }
         
         let tabView = UIStoryboard.init(name: "Main", bundle: nil)
             guard let mainView = tabView.instantiateViewController(withIdentifier: "TabBarViewController") as? TabBarViewController else {return}

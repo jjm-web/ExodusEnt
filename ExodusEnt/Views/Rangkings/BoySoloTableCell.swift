@@ -11,15 +11,17 @@ class BoySoloTableCell: UITableViewCell {
 
     @IBOutlet var medalImg: UIImageView!
     @IBOutlet var idolImg: UIImageView!
-    @IBOutlet var lblBoySolo: UILabel!
-    @IBOutlet var lblGroupName: UILabel!
+    
+    @IBOutlet var lblTeam: UILabel!
+    @IBOutlet var lblSoloName: UILabel!
     @IBOutlet var lblLanking: UILabel!
+    @IBOutlet var lblPoint: UILabel!
     
     @IBOutlet var heartButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
